@@ -16,7 +16,7 @@ Primeiramente, é necessário ter um compilador que suporte a linguagem Java em 
 É necessário fazer o download do arquivo PDF que está sendo utilizado para teste (pode ser baixado através deste link: https://drive.google.com/drive/folders/17cA3drL14Q0N-qlG6VhssBIi5UyLeNYE?usp=sharing)
 
 ## Uso
-Para utlizar o sistema, é preciso seguir um roteiro bem específico. Deste modo, segue o detalhamento:<br>
+Para utilizar o sistema, é preciso seguir um roteiro bem específico. Deste modo, segue o detalhamento:<br>
 1. Importe este projeto e abra-o em sua IDE de preferência.<br>
 1.1. Crie uma pasta vazia em sua máquina.<br>
 1.2. Copie o código desse repositório no GitHub.<br>
@@ -32,7 +32,7 @@ Para utlizar o sistema, é preciso seguir um roteiro bem específico. Deste modo
 ## Justificativas
 Durante a execução do projeto, foi-se utilizado o Maven para que houvesse uma importação mais simples da biblioteca Apache PDFBox, visando uma facilitação do código tanto para o desenvolvedor quanto
 para quem fosse fazer a manutenção do sistema. Ademais, o Maven também tem fácil integração com diferentes tipos de IDE, além de automatizar o build do projeto, permitindo que ocorram testes
-de forma simples e padronizada.
+de forma simples e padronizada.<br>
 Outrossim, a escolha pela biblioteca Apache PDFBox se deve ao fato da mesma possuir uma documentação extensa e detalhada, facilitando o trabalho de desenvolvedores. Nesse sentido, a facilidade e os
 recursos disponibilizados também contribuem para essa escolha, uma vez que é possível ler, escrever e manipular dados de um PDF utilizando essa biblioteca.
   
