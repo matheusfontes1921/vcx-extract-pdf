@@ -3,11 +3,12 @@ Criação de código de extração de dados de um PDF utilizando a linguagem Jav
 
 ## Descrição
 Foi fornecido um teste para que os interessados tivessem a oportunidade de desenvolver um sistema simples que fosse capaz de extrair dados específicos de certo documento em 
-formato PDF. Utilizando o Maven para configuração do sistema, o protótipo apresentado fornece as opções que um determinado usuário pode escolher, sempre permitindo que o mesmo
+formato PDF. Utilizando o Maven para configuração do software, o protótipo apresentado fornece as opções que um determinado usuário pode escolher, sempre permitindo que o mesmo
 consiga eleger qual dado deseja ver no exato momento. Ademais, para manipulação e abertura de arquivos PDF, a biblioteca Apache PDFBox foi consumida durante todo o projeto.
 
 ## Pré-requisitos
 -> O teste deve ser desenvolvido na linguagem Java 
+
 -> É permitido o uso de bibliotecas adicionais
 
 ## Instalação
@@ -16,7 +17,7 @@ Primeiramente, é necessário ter um compilador que suporte a linguagem Java em 
 É necessário fazer o download do arquivo PDF que está sendo utilizado para teste (pode ser baixado através deste link: https://drive.google.com/drive/folders/17cA3drL14Q0N-qlG6VhssBIi5UyLeNYE?usp=sharing)
 
 ## Uso
-Para utlizar o sistema, é preciso seguir um roteiro bem específico. Deste modo, segue o detalhamento: 
+Para utlizar o sistema, é preciso seguir um roteiro bem específico. Deste modo, segue o detalhamento:
 1. Importe este projeto e abra-o em sua IDE de preferência.
 
 1.1. Crie uma pasta vazia em sua máquina.
