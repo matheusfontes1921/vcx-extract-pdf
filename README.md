@@ -7,8 +7,7 @@ formato PDF. Utilizando o Maven para configuração do software, o protótipo ap
 consiga eleger qual dado deseja ver no exato momento. Ademais, para manipulação e abertura de arquivos PDF, a biblioteca Apache PDFBox foi consumida durante todo o projeto.
 
 ## Pré-requisitos
--> O teste deve ser desenvolvido na linguagem Java 
-
+-> O teste deve ser desenvolvido na linguagem Java<br> 
 -> É permitido o uso de bibliotecas adicionais
 
 ## Instalação
@@ -17,23 +16,18 @@ Primeiramente, é necessário ter um compilador que suporte a linguagem Java em 
 É necessário fazer o download do arquivo PDF que está sendo utilizado para teste (pode ser baixado através deste link: https://drive.google.com/drive/folders/17cA3drL14Q0N-qlG6VhssBIi5UyLeNYE?usp=sharing)
 
 ## Uso
-Para utlizar o sistema, é preciso seguir um roteiro bem específico. Deste modo, segue o detalhamento:
-1. Importe este projeto e abra-o em sua IDE de preferência.
-
-1.1. Crie uma pasta vazia em sua máquina.
-
-1.2. Copie o código desse repositório no GitHub.
-
-1.3 Na pasta vazia criada, abra o Git Bash.
-
-1.4 No Git Bash, execute o comando _git clone linkdoreposiório_.
-
-1.5 Abra a pasta criada em sua IDE.
-2. Salve o PDF modelo em algum lugar da máquina e copiar o seu caminho.
-3. Inicie o programa.
-4. Insira o caminho copiado assim que o programa solicitar.
-5. Escolha uma das opções disponibilizadas pelo programa.
-6. Quando quiser parar a aplicação, selecione a opção 6.
+Para utlizar o sistema, é preciso seguir um roteiro bem específico. Deste modo, segue o detalhamento:<br>
+1. Importe este projeto e abra-o em sua IDE de preferência.<br>
+1.1. Crie uma pasta vazia em sua máquina.<br>
+1.2. Copie o código desse repositório no GitHub.<br>
+1.3 Na pasta vazia criada, abra o Git Bash. <br>
+1.4 No Git Bash, execute o comando _git clone linkdoreposiório_. <br>
+1.5 Abra a pasta criada em sua IDE.<br>
+2. Salve o PDF modelo em algum lugar da máquina e copiar o seu caminho.<br>
+3. Inicie o programa.<br>
+4. Insira o caminho copiado assim que o programa solicitar.<br>
+5. Escolha uma das opções disponibilizadas pelo programa.<br>
+6. Quando quiser parar a aplicação, selecione a opção 6.<br>
 
 ## Justificativas
 Durante a execução do projeto, foi-se utilizado o Maven para que houvesse uma importação mais simples da biblioteca Apache PDFBox, visando uma facilitação do código tanto para o desenvolvedor quanto
