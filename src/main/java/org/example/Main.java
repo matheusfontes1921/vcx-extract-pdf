@@ -21,6 +21,55 @@ public class Main {
         openFile();
     }
 
+    /* método chamado diretamente pelo main
+     * e trata a abertura de arquivo pdf
+     * utilizando Apache PDFBox e suas classes
+     */
+    public static void openFile() {
+        /* o caminho do arquivo será fornecido
+         * pelo usuário
+         */
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Seja bem-vindo! Digite o caminho do arquivo: ");
+        String strPath = sc.next();
+        try (PDDocument document = PDDocument.load( new File(strPath))) {
+
+            /*condicional para verificar se o método está
+            criptografado
+             */
+            if (!document.isEncrypted()) {
+
+                /*variável da classe que coleta os textos
+                de determinada área no pdf
+                 */
+                PDFTextStripperByArea s = new PDFTextStripperByArea();
+                s.setSortByPosition(true);
+
+                PDFTextStripper tStripper = new PDFTextStripper();
+
+                /*variável que transfomra o documento em texto */
+                String pdfFileInText = tStripper.getText(document);
+                /*vetor de string criado onde cada linha
+                 * se torna uma posição
+                 */
+                String lines[] = pdfFileInText.split("\\r?\\n");
+
+                /*chamada do método que realiza as operações*/
+                optionsBody(lines);
+            }
+        }
+        /* tratamento de exceções */
+        catch (FileNotFoundException e) {
+            System.out.println("Arquivo não encontrado! ");
+        }
+        catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
+        catch (IOException e) {
+            System.out.println(e.getMessage());;
+        }
+    }
+
 
 
     /* método para imprimir o texto completo do
@@ -53,7 +102,6 @@ public class Main {
         System.out.println(sub);
     }
     public static void print(List<Integer> lineNumber, String[]lines) {
-
         String l, sub;
         List<String> sentences = new ArrayList<>();
         /* for-each para pegar mais de uma
@@ -65,6 +113,9 @@ public class Main {
             sub = l.substring(0,l.length());
             sentences.add(sub);
         }
+        /* para cada objeto dentro da lista
+        * sentences, o mesmo será impresso
+         */
         for (String phrase : sentences) {
             System.out.println(phrase);
         }
@@ -137,58 +188,6 @@ public class Main {
                 case 6:
                     System.out.println("Obrigado por utilizar!");
             }
-        }
-    }
-
-
-
-    /* método chamado diretamente pelo main
-    * e trata a abertura de arquivo pdf
-    * utilizando Apache PDFBox e suas classes
-     */
-    public static void openFile() {
-        /* o caminho do arquivo será fornecido
-        * pelo usuário
-         */
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Seja bem-vindo! Digite o caminho do arquivo: ");
-        String strPath = sc.next();
-        try (PDDocument document = PDDocument.load( new File(strPath))) {
-
-            /*condicional para verificar se o método está
-            criptografado
-             */
-            if (!document.isEncrypted()) {
-
-                /*variável da classe que coleta os textos
-                de determinada área no pdf
-                 */
-                PDFTextStripperByArea s = new PDFTextStripperByArea();
-                s.setSortByPosition(true);
-
-                PDFTextStripper tStripper = new PDFTextStripper();
-
-                /*variável que transfomra o documento em texto */
-                String pdfFileInText = tStripper.getText(document);
-                /*vetor de string criado onde cada linha
-                * se torna uma posição
-                 */
-                String lines[] = pdfFileInText.split("\\r?\\n");
-
-                /*chamada do método que realiza as operações*/
-                optionsBody(lines);
-
-            }
-        }
-        /* tratamento de exceções */
-        catch (FileNotFoundException e) {
-            System.out.println("Arquivo não encontrado! ");
-        }
-        catch (RuntimeException e) {
-            System.out.println(e.getMessage());
-        }
-        catch (IOException e) {
-            System.out.println(e.getMessage());;
         }
     }
 }
