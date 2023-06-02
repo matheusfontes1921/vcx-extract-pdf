@@ -12,15 +12,21 @@ consiga eleger qual dado deseja ver no exato momento. Ademais, para manipulaçã
 
 ## Instalação
 Primeiramente, é necessário ter um compilador que suporte a linguagem Java em sua máquina (IntelliJ, NetBeans, Eclipse, etc.).
-É necessário fazer o download do arquivo pdf que está sendo utilizado para teste (pode ser baixado através deste link: https://drive.google.com/drive/folders/17cA3drL14Q0N-qlG6VhssBIi5UyLeNYE?usp=sharing)
+
+É necessário fazer o download do arquivo PDF que está sendo utilizado para teste (pode ser baixado através deste link: https://drive.google.com/drive/folders/17cA3drL14Q0N-qlG6VhssBIi5UyLeNYE?usp=sharing)
 
 ## Uso
 Para utlizar o sistema, é preciso seguir um roteiro bem específico. Deste modo, segue o detalhamento: 
 1. Importe este projeto e abra-o em sua IDE de preferência.
+
 1.1. Crie uma pasta vazia em sua máquina.
+
 1.2. Copie o código desse repositório no GitHub.
+
 1.3 Na pasta vazia criada, abra o Git Bash.
+
 1.4 No Git Bash, execute o comando _git clone linkdoreposiório_.
+
 1.5 Abra a pasta criada em sua IDE.
 2. Salve o PDF modelo em algum lugar da máquina e copiar o seu caminho.
 3. Inicie o programa.
@@ -40,7 +46,7 @@ recursos disponibilizados também contribuem para essa escolha, uma vez que é p
 1. Automatizar o sistema para que o mesmo código seja capaz de extrair dados de diferentes modelos de PDF.
 2. Permitir que o código também extraia dados de outros tipos de documento.
   
-## Autores
+## Autor
 Matheus Fontes Almeida Moreira Silva
 
 ## Agradecimentos
