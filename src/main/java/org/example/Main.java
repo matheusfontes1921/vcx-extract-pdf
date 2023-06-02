@@ -52,7 +52,7 @@ public class Main {
                 /*vetor de string criado onde cada linha
                  * se torna uma posição
                  */
-                String lines[] = pdfFileInText.split("\\r?\\n");
+                String[] lines = pdfFileInText.split("\\r?\\n");
 
                 /*chamada do método que realiza as operações*/
                 optionsBody(lines);
@@ -62,11 +62,8 @@ public class Main {
         catch (FileNotFoundException e) {
             System.out.println("Arquivo não encontrado! ");
         }
-        catch (RuntimeException e) {
+        catch (RuntimeException | IOException e) {
             System.out.println(e.getMessage());
-        }
-        catch (IOException e) {
-            System.out.println(e.getMessage());;
         }
     }
 
@@ -88,21 +85,16 @@ public class Main {
     * consegue tratar os dados que estão em mais de uma linha
     */
     public static void print(int lineNumber, String[]lines) {
-        String l, sub;
+        String l;
         /* a variávei l terá o valor do número
         * da linha proveniente da operação
         * que o usuário deseja realizar
          */
         l = lines[lineNumber - 1];
-        /* a variável sub, que será impressa,
-        * terá o tamnho de 0 até o comprimento
-        * da linha escolhida
-         */
-        sub = l.substring(0,l.length());
-        System.out.println(sub);
+        System.out.println(l);
     }
     public static void print(List<Integer> lineNumber, String[]lines) {
-        String l, sub;
+        String l;
         List<String> sentences = new ArrayList<>();
         /* for-each para pegar mais de uma
         * linha, caso a informação esteja
@@ -110,8 +102,7 @@ public class Main {
          */
         for (int ln : lineNumber) {
             l = lines[ln - 1];
-            sub = l.substring(0,l.length());
-            sentences.add(sub);
+            sentences.add(l);
         }
         /* para cada objeto dentro da lista
         * sentences, o mesmo será impresso
@@ -149,44 +140,42 @@ public class Main {
             * solicitadas pelo usuário
              */
             switch (choose) {
-                case 1:
+                case 1 -> {
                     /* atualização do número da linha onde
-                    * contém a informação desejada e impressão
-                    * do código através da chamada do método
-                    * print
+                     * contém a informação desejada e impressão
+                     * do código através da chamada do método
+                     * print
                      */
                     lineNumber = 3;
-                    print(lineNumber,lines);
-                    break;
-                case 2:
+                    print(lineNumber, lines);
+                }
+                case 2 -> {
                     /*laço de repetição para inserção
-                    * do números das linhas que contêm
-                    * as informações solicitadas no momento
+                     * do números das linhas que contêm
+                     * as informações solicitadas no momento
                      */
-                    for(int i = 0; i < 3; i ++) {
+                    for (int i = 0; i < 3; i++) {
                         list.add(values.get(i));
                     }
-                    print(list,lines);
+                    print(list, lines);
                     list.clear();
-                    break;
-                case 3:
-                    for(int i = 3; i < values.size(); i ++) {
+                }
+                case 3 -> {
+                    for (int i = 3; i < values.size(); i++) {
                         list.add(values.get(i));
                     }
-                    print(list,lines);
-                    break;
-                case 4:
+                    print(list, lines);
+                }
+                case 4 -> {
                     lineNumber = 12;
-                    print(lineNumber,lines);
-                    break;
-                case 5:
+                    print(lineNumber, lines);
+                }
+                case 5 ->
                     /* chamada de método para impressão de
-                    * todas as informações do documento
+                     * todas as informações do documento
                      */
-                    option5(lines);
-                    break;
-                case 6:
-                    System.out.println("Obrigado por utilizar!");
+                        option5(lines);
+                case 6 -> System.out.println("Obrigado por utilizar!");
             }
         }
     }
